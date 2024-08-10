@@ -4,11 +4,11 @@ AddEventHandler('ox:playerLoaded', function(source)
     if not player or not player.charId then return end
 
     if Debug then
-        print(
-            locale('load_in')..locale('user_name')..
-            player.username.." | "..locale('char_stid')
-            ..player.stateId
-        )
+        local data = {
+            locale('user_name')..player.username,
+            locale('char_stid')..player.stateId
+        }
+        print(json.encode(data, {indent=true}))
     end
 end)
 
