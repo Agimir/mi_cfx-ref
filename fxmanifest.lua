@@ -5,11 +5,11 @@ lua54 'yes'
 game 'gta5'
 
 --[[    resource information    ]]--
-name 'mi_template_job'
-author 'MIAgimir'
+name 'mi_template'
+author 'author_here'
 version '0.0.0'
-repository 'https://github.com/Mesa-Indigo/mi_housing'
-description 'ox simple housing system'
+repository 'https://github.com/user_here/template'
+description 'change_for_resource'
 
 --[[    dependancies    ]]--
 dependencies { 
@@ -22,25 +22,31 @@ dependencies {
 
 --[[    manifest information    ]]--
 shared_scripts {
+    -- overextended dependancies
     '@ox_lib/init.lua',
     '@ox_core/lib/init.lua',
 
+    -- core resources
     'shared/*.lua',
     'data/*.lua',
     'utils/*.lua'
 }
 
 client_scripts {
+    -- overextended dependancies
     '@ox_core/imports/client.lua',
 
+    -- core resources
     'client/**/*.lua'
 }
 
 server_scripts {
+    -- overextended dependancies
     '@oxmysql/lib/MySQL.lua',
     '@ox_core/imports/server.lua',
 
+    -- core resources
     'server/**/*.lua'
 }
 
-files {}
+files { 'locales/*.json' }
