@@ -1,4 +1,27 @@
 
+-- get time
+-- returns in world time details
+Utils.GetWorldTime = function()
+    local tm = {
+        hour = GetClockHours(),
+        mint = GetClockMinutes(),
+        secd = GetClockSeconds()
+    }
+    return tm
+end
+
+-- get date
+-- returns in world date details
+Utils.GetWorldDate = function()
+    local dt = {
+        days = GetClockDayOfMonth(),
+        week = GetClockDayOfWeek(),
+        mnth = GetClockMonth()
+    }
+    return dt
+end
+
+
 -- get vehicle data
 -- returns vehicle model name (i.e. jester4 = Jester RR)
 Utils.GetVehInfo = function(vehicle)
@@ -35,7 +58,8 @@ Utils.CreateObject = function(obj, model, coord)
     SetEntityAsMissionEntity(obj, true, false)
 end
 
--- delete shell function
+-- delete object function
+-- returns error if object not found
 Utils.DeleteObject = function(obj)
     if not obj then
         print(locale('debug')..'No presented object to delete')

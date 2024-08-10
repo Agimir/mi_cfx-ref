@@ -11,21 +11,25 @@ NotInfo = {
     showduration = true,
 }
 
+-- blue
 Inf = {
     color_bgnd = '#004466', color_text = '#ffffff', color_desc = '#ffffff',
     color_icon = '#ffffff', icon_disp = 'question', icon_anim = 'beat'
 }
 
+-- red
 Err = {
     color_bgnd = '#660000', color_text = '#ffffff', color_desc = '#ffffff',
     color_icon = '#ffffff', icon_disp = 'xmark', icon_anim = 'beat'
 }
 
+-- green
 Cor = {
     color_bgnd = '#006644', color_text = '#ffffff', color_desc = '#ffffff',
     color_icon = '#ffffff', icon_disp = 'check', icon_anim = 'beat'
 }
 
+-- yellow
 War = {
     color_bgnd = '#FF7627', color_text = '#ffffff', color_desc = '#ffffff',
     color_icon = '#ffffff', icon_disp = 'exclamation', icon_anim = 'beat'
