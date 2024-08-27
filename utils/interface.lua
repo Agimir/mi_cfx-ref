@@ -1,3 +1,4 @@
+
 --------------------------------
 ----    Helpful Links   ----
 -- https://www.w3schools.com/colors/colors_picker.asp For HTML Colors
@@ -7,7 +8,7 @@
 ----    Notification Options    ----
 NotInfo = {
     position = 'top',
-    duration = 5000,
+    duration = 8000,
     showduration = true,
 }
 
@@ -36,7 +37,7 @@ War = {
 }
 
 
-DoNotif= function(data, type)
+Ifc.DoNotif= function(data, type)
     lib.notify({
         id = data.id, title = data.title, description = data.description,
         duration = NotInfo.duration, showDuration = NotInfo.showduration,
