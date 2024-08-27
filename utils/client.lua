@@ -54,6 +54,8 @@ Cnt.Create_Prop = function(obj, model, coord, head, bool)
     return obj
 end
 
+-- create object function for shells
+-- mission entity sets to belong to this script
 Cnt.Create_Shell = function(shell, model, coord, head)
     shell = CreateObject(model, coord.x,
     coord.y, coord.z, true, false, false)
@@ -84,12 +86,20 @@ end
 -- set color for progress bar in context menu
 Cnt.GetProgressColor = function(percent)
     if percent >= 80 and percent <= 100 then
-        return '#40C057'
+        return '#40C057' -- green
     elseif percent <= 80 and percent >= 50 then
-        return '#FFD43B'
+        return '#FFD43B' -- yellow
     elseif percent <= 50 and percent >= 25 then
-        return '#F76707'
+        return '#F76707' -- orange
     elseif percent <= 25 and percent >= 0 then
-        return '#E03131'
+        return '#E03131' -- red
     end
 end
+
+--[[
+
+WIP Functions
+
+Cnt.
+
+]]--

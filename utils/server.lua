@@ -22,3 +22,16 @@ Svr.GetEntity = function(netid)
         return entity
     end
 end
+
+--[[
+
+WIP Functions
+
+-- cron function for scheduling
+Svr.Cron = function()
+
+end
+
+
+
+]]--

@@ -17,6 +17,7 @@ dependencies {
     '/onesync',
     'ox_lib',
     'ox_target',
+    'ox_inventory',
     'ox_core'
 }
 
