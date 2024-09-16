@@ -1,0 +1,10 @@
+{
+    "debug": "Debug Mode Active: ",
+
+    "ig_sec": "Second: ",
+    "ig_min": "Minute: ",
+    "ig_hrs": "Hour: ",
+    "ig_day": "Day: ",
+    "ig_wkd": "Week: ",
+    "ig_mth": "Month: "
+}

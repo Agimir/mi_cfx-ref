@@ -8,7 +8,7 @@
 ----    Notification Options    ----
 NotInfo = {
     position = 'top',
-    duration = 8000,
+    duration = 5000,
     showduration = true,
 }
 

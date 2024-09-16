@@ -1,0 +1,3 @@
+
+-- locale option
+Locale = 'en'
