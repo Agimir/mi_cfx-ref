@@ -27,18 +27,25 @@ Util.GetEntity = function(i)
     end
 end
 
-Util.DiscordLog = function(s, p, m)
+Util.DiscordLog = function(s, m)
     if Webhook == nil then return end
     local net = {
-        ["color"] = '13075706',
+        ["color"] = '139741DD',
         ["title"] = GetPlayerName(s),
         ["description"] = m,
         ["footer"] = {
             ["text"] = os.date('%H:%M - %d. %m. %Y', os.time()),
-            ["icon_url"] = '',
+            ["icon_url"] = 'https://media.discordapp.net/attachments/1270909597414326342/1285242598184976467/Logo.png',
         },
     }
     PerformHttpRequest(Webhook, function(err, text, headers) end,
     'POST', json.encode({ username = resource, embeds = net }),
     { ['Content-Type'] = 'application/json' })
 end
+
+Util.SpawnVehicle = function(m, c, t)
+    local v = CreateVehicleServerSetter(m, t, c.x, c.y, c.z-0.5, c.w)
+    return v
+end
+
+-- upload@
