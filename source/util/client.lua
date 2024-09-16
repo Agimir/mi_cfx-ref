@@ -41,22 +41,20 @@ Util.Teleport = function(p, x, y, z, w)
     DoScreenFadeIn(150)
 end
 
--- convert current value and max value to percentage
-Cnt.GetPercentage = function(percent, maxvalue)
-    if tonumber(percent) and tonumber(maxvalue) then
-        return (maxvalue*percent)/100
+Util.GetPercentage = function(p, m)
+    if tonumber(p) and tonumber(m) then
+        return (m*p)/100
     end
 end
 
--- set color for progress bar in context menu
-Cnt.GetProgressColor = function(percent)
-    if percent >= 80 and percent <= 100 then
-        return '#40C057'
-    elseif percent <= 80 and percent >= 50 then
-        return '#FFD43B'
-    elseif percent <= 50 and percent >= 25 then
-        return '#F76707'
-    elseif percent <= 25 and percent >= 0 then
-        return '#E03131'
+Util.GetProgressColor = function(p)
+    if p >= 80 and p <= 100 then
+        return '#40C057' -- green
+    elseif p <= 80 and p >= 50 then
+        return '#FFD43B' -- yellow
+    elseif p <= 50 and p >= 25 then
+        return '#F76707' -- orange
+    elseif p <= 25 and p >= 0 then
+        return '#E03131' -- red
     end
 end
