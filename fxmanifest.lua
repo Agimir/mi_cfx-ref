@@ -28,14 +28,16 @@ shared_scripts {
 -- client files
 client_scripts {
     '@ox_core/imports/client.lua',
-    'source/client/**/*.lua'
+    'source/client/*.lua',
+    'source/bridge/client.lua'
 }
 
 -- server files
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
     '@ox_core/imports/server.lua',
-    'source/server/**/*.lua'
+    'source/server/*.lua',
+    'source/bridge/server.lua'
 }
 
 -- resource files

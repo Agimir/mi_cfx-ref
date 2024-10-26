@@ -21,7 +21,7 @@ Inf = {
     color_desc = '#ffffff',
     color_icon = '#ffffff',
     icon_disp = 'question',
-    icon_anim = 'beat'
+    icon_anim = Shared.Notify.animate
 }
 
 -- red
@@ -31,7 +31,7 @@ Err = {
     color_desc = '#ffffff',
     color_icon = '#ffffff',
     icon_disp = 'xmark',
-    icon_anim = 'beat'
+    icon_anim = Shared.Notify.animate
 }
 
 -- green
@@ -41,7 +41,7 @@ Cor = {
     color_desc = '#ffffff',
     color_icon = '#ffffff',
     icon_disp = 'check',
-    icon_anim = 'beat'
+    icon_anim = Shared.Notify.animate
 }
 
 -- yellow
@@ -51,27 +51,33 @@ War = {
     color_desc = '#ffffff',
     color_icon = '#ffffff',
     icon_disp = 'exclamation',
-    icon_anim = 'beat'
+    icon_anim = Shared.Notify.animate
 }
 
 Notify = function(d, t)
-    local animated 
-    lib.notify({
-        id = d.id,
-        title = d.title,
-        description = d.description,
-        duration = NotInfo.duration,
-        showDuration = NotInfo.showduration,
-        position = NotInfo.position,
-        style = {
-            backgroundColor = t.color_bgnd,
-            color = t.color_text,
-            ['.description'] = {
-                color = t.color_desc
-            }
-        },
-        icon = t.icon_disp,
-        iconColor = t.color_icon,
-        iconAnimation = t.icon_anim
-    })
+    if not Shared.Notify.enable then
+        if Debug then
+            print(d ..', '.. t)
+        return end
+    end
+    if Shared.Notify.enable then
+        lib.notify({
+            id = d.id,
+            title = d.title,
+            description = d.description,
+            duration = NotInfo.duration,
+            showDuration = NotInfo.showduration,
+            position = NotInfo.position,
+            style = {
+                backgroundColor = t.color_bgnd,
+                color = t.color_text,
+                ['.description'] = {
+                    color = t.color_desc
+                }
+            },
+            icon = t.icon_disp,
+            iconColor = t.color_icon,
+            iconAnimation = t.icon_anim
+        })
+    end
 end

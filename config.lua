@@ -2,7 +2,11 @@
 -- locale option
 Locale = 'en'
 
+-- debug options
+Debug = true
+
 -- notification options
+-- https://overextended.dev/ox_lib/Modules/Interface/Client/notify Notification Documentation
 Shared.Notify = {
 
     -- enable or disable notifications
@@ -17,6 +21,6 @@ Shared.Notify = {
     -- show duration on notification
     showtime = false,
 
-    -- set notification icon to be animated
-    animate = true
+    -- set notification icon animation
+    animate = 'beat'
 }
