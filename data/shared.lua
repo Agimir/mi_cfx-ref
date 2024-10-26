@@ -5,8 +5,15 @@ Locale = 'en'
 -- debug options
 Debug = true
 
+-- framework choice / 'ox', 'esx', 'qbox'
+System = 'ox'
+
+-- Notification Documentation
+-- https://overextended.dev/ox_lib/Modules/Interface/Client/notify
+
+-- adjust colors & details in the source/shared/shared.lua file
+
 -- notification options
--- https://overextended.dev/ox_lib/Modules/Interface/Client/notify Notification Documentation
 Shared.Notify = {
 
     -- enable or disable notifications
@@ -22,5 +29,8 @@ Shared.Notify = {
     showtime = false,
 
     -- set notification icon animation
-    animate = 'beat'
+    animate = 'beat',
+
+    -- sound to play on notification
+    sound = { a = 'set', b = 'set' }
 }

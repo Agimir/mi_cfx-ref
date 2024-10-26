@@ -4,40 +4,29 @@ use_experimental_fxv2_oal 'yes'
 fx_version 'cerulean' lua54 'yes' game 'gta5'
 
 -- resource information
-repository 'https://github.com/Mesa-Indigo/mi_core'
-description 'ox_core based script'
-author 'Agimir' name 'MI_CORE' version '0.0.1'
+repository 'https://github.com/Agimir/mi_tmp'
+description 'template script for mesa indigo resources'
+author 'Agimir'
+name 'mi_tmp'
+version '0.0.0'
 license 'LGPL-3.0-or-later'
-
--- resource dependencies
-dependencies {
-    'oxmysql',
-    'ox_lib',
-    'ox_core',
-    'ox_inventory'
-}
 
 -- shared files
 shared_scripts {
-    '@ox_lib/init.lua',
-    '@ox_core/lib/init.lua',
     'source/shared/*.lua',
-    'data/*.lua', 'config.lua'
+    'data/*.lua',
 }
 
 -- client files
 client_scripts {
-    '@ox_core/imports/client.lua',
-    'source/client/*.lua',
-    'source/bridge/client.lua'
+    'bridge/client/*.lua',
+    'source/client/*.lua'
 }
 
 -- server files
 server_scripts {
-    '@oxmysql/lib/MySQL.lua',
-    '@ox_core/imports/server.lua',
-    'source/server/*.lua',
-    'source/bridge/server.lua'
+    'bridge/server/*.lua',
+    'source/server/*.lua'
 }
 
 -- resource files
