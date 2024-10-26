@@ -40,5 +40,5 @@ server_scripts {
 
 -- resource files
 files {
-    'data/locale/*.json'
+    'locales/*.json'
 }
