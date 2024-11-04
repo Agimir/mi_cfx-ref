@@ -15,6 +15,7 @@ license 'LGPL-3.0-or-later'
 shared_scripts {
     'source/shared/*.lua',
     'data/*.lua',
+    'source/init.lua',
 }
 
 -- client files
@@ -29,7 +30,13 @@ server_scripts {
     'source/server/*.lua'
 }
 
+ui_page 'web/source/index.html'
+
 -- resource files
 files {
+    'source/init.lua',
+    'web/source/index.html',
+    'web/**/*',
+    'web/**/**diagnostic/*',
     'locales/*.json'
 }

@@ -1,6 +1,22 @@
 Shared, Data = {}, {}
 lib.locale()
 
+IGTime = function()
+    local i = {
+        s = GetClockSeconds(),
+        m = GetClockMinutes(),
+        h = GetClockHours()
+    } return i
+end
+
+IGDate = function()
+    local i = {
+        d = GetClockDayOfMonth(),
+        w = GetClockDayOfWeek(),
+        m = GetClockMonth()
+    } return i
+end
+
 --------------------------------
 ----    Helpful Links   ----
 -- https://www.w3schools.com/colors/colors_picker.asp For HTML Colors
