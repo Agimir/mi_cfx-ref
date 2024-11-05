@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translate(-50%, 100%); /* Start from the bottom */
+    }
+    to {
+        transform: translate(-50%, -50%); /* End at the center */
+    }
+}
+
+
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mi_net_frame {
+    width: 120vh; height: 80vh;
+    background-image: linear-gradient(to bottom right, rgb(77, 76, 85), rgb(77, 82, 100));
+    border-style: outset; position: fixed; box-shadow: 10px 10px 8px #888888;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation: floatUp 1.5s ease-out forwards;
+}
+
+#mi_net_screen {
+    width: 118vh; height: 78vh;
+    background-color: #313131;
+    border-style: inset; position: relative;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+
+#app {
+    width: 117vh; height: 77vh;
+    background-color: #6e6e6e;
+    border: transparent 10px ; position: relative;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
